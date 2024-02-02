@@ -1,18 +1,26 @@
 resource "aws_security_group" "load_balancer_security_group" {
-  ingress {
-    from_port   = 80
-    to_port     = 80
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  egress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
+  name        = "bu-alb-sg"
+  description = "Allow http and https"
+  vpc_id      = var.vpc
 }
+
+resource "aws_security_group_rule" "ingress-http" {
+  type              = "ingress"
+  from_port         = 80
+  to_port           = 80
+  protocol          = "tcp"
+  security_group_id = aws_security_group.load_balancer_security_group.id
+  cidr_blocks       = var.any-ip
+}
+
+# resource "aws_security_group_rule" "egress-full" {
+#   type = "egress"
+#   from_port   = 0
+#   to_port     = 0
+#   protocol    = "-1"
+#   cidr_blocks = var.any-ip
+# }
+# }
 
 resource "aws_alb_target_group" "target_group" {
   name     = var.target_group_name
