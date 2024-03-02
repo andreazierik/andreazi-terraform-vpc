@@ -27,3 +27,13 @@ variable "private_subnet_cidr_blocks" {
   type        = list(string)
   description = "Default CIDR for private subnets"
 }
+
+variable "repo-app-name" {
+  type        = string
+  description = "Reponame pro repositorio da Aplicacao"
+}
+
+variable "repo-default-desc" {
+  type        = string
+  description = "Descricao padro pros repositorios"
+}

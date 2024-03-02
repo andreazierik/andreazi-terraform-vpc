@@ -2,6 +2,13 @@ data "http" "casa-public-ip" {
   url = "https://ifconfig.me/ip"
 }
 
+module "codecommit" {
+  source = "./modules/codecommit"
+
+  repo-app-name     = var.repo-app-name
+  repo-default-desc = var.repo-default-desc
+}
+
 module "vpc" {
   source = "./modules/vpc"
 
