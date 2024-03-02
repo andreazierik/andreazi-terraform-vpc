@@ -1,13 +1,9 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 5.34.0"
-    }
-  }
+data "http" "casa-public-ip" {
+  url = "https://ifconfig.me/ip"
 }
 
-# module "ecr" {
-#   source        = "./modules/ecr"
-#   ecr_repo_name = local.ecr_repo_name
-# }
+module "vpc" {
+  source = "./modules/vpc"
+  azs    = var.aws_azs
+  name   = var.empresa
+}
