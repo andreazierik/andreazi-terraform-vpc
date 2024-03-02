@@ -4,6 +4,11 @@ data "http" "casa-public-ip" {
 
 module "vpc" {
   source = "./modules/vpc"
-  azs    = var.aws_azs
-  name   = var.empresa
+
+  azs                        = var.azs
+  name                       = var.name
+  vpc_cidr_block             = var.vpc_cidr_block
+  public_subnet_cidr_blocks  = var.public_subnet_cidr_blocks
+  private_subnet_cidr_blocks = var.private_subnet_cidr_blocks
+  any-ip                     = var.any-ip
 }

@@ -1,23 +1,29 @@
 variable "any-ip" {
-  type        = list(string)
-  default     = ["0.0.0.0/0"]
+  type        = string
   description = "IP corringa"
 }
 
-variable "aws_azs" {
-  type        = list(string)
-  default     = ["us-east-1e", "us-east-1f"]
-  description = "Default AZs for this configuration"
-}
-
-variable "empresa" {
+variable "name" {
   type        = string
-  default     = "iesde"
   description = "VPC name"
 }
 
-variable "container_port" {
+variable "azs" {
+  type        = list(string)
+  description = "Default AZs for this configuration"
+}
+
+variable "vpc_cidr_block" {
   type        = string
-  default     = "80"
-  description = "Default container port"
+  description = "Default CIDR for AWS VPC"
+}
+
+variable "public_subnet_cidr_blocks" {
+  type        = list(string)
+  description = "Default CIDR for public subnets"
+}
+
+variable "private_subnet_cidr_blocks" {
+  type        = list(string)
+  description = "Default CIDR for private subnets"
 }

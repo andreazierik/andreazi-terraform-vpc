@@ -1,11 +1,11 @@
 output "vpc-id" {
-  value = aws_vpc.iesde_vpc.id
+  value = aws_vpc.andreazi_vpc.id
 }
 
 output "public_subnet" {
-  value = aws_subnet.iesde_public_subnets[*].id
+  value = aws_subnet.andreazi_public_subnet[*].id
 }
 
 output "private_subnet" {
-  value = aws_subnet.iesde_private_subnets[*].id
+  value = aws_subnet.andreazi_private_subnet[*].id
 }
