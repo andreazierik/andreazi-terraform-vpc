@@ -25,6 +25,7 @@ aws dynamodb create-table \
 
 | Name | Source | Version |
 |------|--------|---------|
+| <a name="module_alb"></a> [alb](#module\_alb) | ./modules/alb | n/a |
 | <a name="module_codecommit"></a> [codecommit](#module\_codecommit) | ./modules/codecommit | n/a |
 | <a name="module_vpc"></a> [vpc](#module\_vpc) | ./modules/vpc | n/a |
 
@@ -38,6 +39,7 @@ aws dynamodb create-table \
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_alb-sg-name"></a> [alb-sg-name](#input\_alb-sg-name) | Nome do Security Group pro Load Balance | `string` | n/a | yes |
 | <a name="input_any-ip"></a> [any-ip](#input\_any-ip) | IP corringa | `string` | n/a | yes |
 | <a name="input_azs"></a> [azs](#input\_azs) | Default AZs for this configuration | `list(string)` | n/a | yes |
 | <a name="input_name"></a> [name](#input\_name) | VPC name | `string` | n/a | yes |
@@ -45,6 +47,7 @@ aws dynamodb create-table \
 | <a name="input_public_subnet_cidr_blocks"></a> [public\_subnet\_cidr\_blocks](#input\_public\_subnet\_cidr\_blocks) | Default CIDR for public subnets | `list(string)` | n/a | yes |
 | <a name="input_repo-app-name"></a> [repo-app-name](#input\_repo-app-name) | Reponame pro repositorio da Aplicacao | `string` | n/a | yes |
 | <a name="input_repo-default-desc"></a> [repo-default-desc](#input\_repo-default-desc) | Descricao padro pros repositorios | `string` | n/a | yes |
+| <a name="input_vpc-id"></a> [vpc-id](#input\_vpc-id) | VPC ID pro security group | `string` | n/a | yes |
 | <a name="input_vpc_cidr_block"></a> [vpc\_cidr\_block](#input\_vpc\_cidr\_block) | Default CIDR for AWS VPC | `string` | n/a | yes |
 
 ## Outputs
