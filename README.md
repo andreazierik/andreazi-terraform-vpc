@@ -25,6 +25,7 @@ aws dynamodb create-table \
 
 | Name | Source | Version |
 |------|--------|---------|
+| <a name="module_codecommit"></a> [codecommit](#module\_codecommit) | ./modules/codecommit | n/a |
 | <a name="module_vpc"></a> [vpc](#module\_vpc) | ./modules/vpc | n/a |
 
 ## Resources
@@ -42,5 +43,13 @@ aws dynamodb create-table \
 | <a name="input_name"></a> [name](#input\_name) | VPC name | `string` | n/a | yes |
 | <a name="input_private_subnet_cidr_blocks"></a> [private\_subnet\_cidr\_blocks](#input\_private\_subnet\_cidr\_blocks) | Default CIDR for private subnets | `list(string)` | n/a | yes |
 | <a name="input_public_subnet_cidr_blocks"></a> [public\_subnet\_cidr\_blocks](#input\_public\_subnet\_cidr\_blocks) | Default CIDR for public subnets | `list(string)` | n/a | yes |
+| <a name="input_repo-app-name"></a> [repo-app-name](#input\_repo-app-name) | Reponame pro repositorio da Aplicacao | `string` | n/a | yes |
+| <a name="input_repo-default-desc"></a> [repo-default-desc](#input\_repo-default-desc) | Descricao padro pros repositorios | `string` | n/a | yes |
 | <a name="input_vpc_cidr_block"></a> [vpc\_cidr\_block](#input\_vpc\_cidr\_block) | Default CIDR for AWS VPC | `string` | n/a | yes |
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| <a name="output_repo-info"></a> [repo-info](#output\_repo-info) | n/a |
 <!-- END_TF_DOCS -->
