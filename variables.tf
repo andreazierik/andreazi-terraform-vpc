@@ -37,3 +37,13 @@ variable "repo-default-desc" {
   type        = string
   description = "Descricao padro pros repositorios"
 }
+
+variable "alb-sg-name" {
+  type        = string
+  description = "Nome do Security Group pro Load Balance"
+}
+
+variable "vpc-id" {
+  type = string
+  description = "VPC ID pro security group"
+}
