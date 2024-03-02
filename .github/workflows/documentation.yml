@@ -5,10 +5,11 @@ on:
 jobs:
   docs:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-    - uses: actions/checkout@v3
-      with:
-        ref: ${{ github.event.pull_request.head.ref }}
+    - name: Checkout code
+      uses: actions/checkout@v4
 
     - name: Render terraform docs and push changes back to PR
       uses: terraform-docs/gh-actions@main
@@ -18,3 +19,5 @@ jobs:
         git-push: true
         git-push-sign-off: true
         git-commit-message: "terraform-docs: automated action"
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
