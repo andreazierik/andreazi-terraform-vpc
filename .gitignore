@@ -1,4 +1,5 @@
 .terraform/*
+.vscode/*
 .terraform.lock.hcl
 backend.tf
 op16.json
