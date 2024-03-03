@@ -39,6 +39,7 @@ aws dynamodb create-table \
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_alb-name"></a> [alb-name](#input\_alb-name) | Nome do ALB | `string` | n/a | yes |
 | <a name="input_alb-sg-name"></a> [alb-sg-name](#input\_alb-sg-name) | Nome do Security Group pro Load Balance | `string` | n/a | yes |
 | <a name="input_any-ip"></a> [any-ip](#input\_any-ip) | IP corringa | `string` | n/a | yes |
 | <a name="input_azs"></a> [azs](#input\_azs) | Default AZs for this configuration | `list(string)` | n/a | yes |
@@ -47,12 +48,13 @@ aws dynamodb create-table \
 | <a name="input_public_subnet_cidr_blocks"></a> [public\_subnet\_cidr\_blocks](#input\_public\_subnet\_cidr\_blocks) | Default CIDR for public subnets | `list(string)` | n/a | yes |
 | <a name="input_repo-app-name"></a> [repo-app-name](#input\_repo-app-name) | Reponame pro repositorio da Aplicacao | `string` | n/a | yes |
 | <a name="input_repo-default-desc"></a> [repo-default-desc](#input\_repo-default-desc) | Descricao padro pros repositorios | `string` | n/a | yes |
-| <a name="input_vpc-id"></a> [vpc-id](#input\_vpc-id) | VPC ID pro security group | `string` | n/a | yes |
+| <a name="input_tg-name"></a> [tg-name](#input\_tg-name) | Nome padrao do Target Group | `string` | n/a | yes |
 | <a name="input_vpc_cidr_block"></a> [vpc\_cidr\_block](#input\_vpc\_cidr\_block) | Default CIDR for AWS VPC | `string` | n/a | yes |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
+| <a name="output_alb-endpoint"></a> [alb-endpoint](#output\_alb-endpoint) | n/a |
 | <a name="output_repo-info"></a> [repo-info](#output\_repo-info) | n/a |
 <!-- END_TF_DOCS -->
