@@ -43,7 +43,12 @@ variable "alb-sg-name" {
   description = "Nome do Security Group pro Load Balance"
 }
 
-variable "vpc-id" {
-  type = string
-  description = "VPC ID pro security group"
+variable "tg-name" {
+  type        = string
+  description = "Nome padrao do Target Group"
+}
+
+variable "alb-name" {
+  type        = string
+  description = "Nome do ALB"
 }

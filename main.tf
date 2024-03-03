@@ -5,9 +5,12 @@ data "http" "casa-public-ip" {
 module "alb" {
   source = "./modules/alb"
 
-  alb-sg-name = var.alb-sg-name
-  vpc-id      = module.vpc.vpc-id
-  any-ip      = ["${data.http.casa-public-ip.response_body}/32"]
+  alb-sg-name      = var.alb-sg-name
+  vpc-id           = module.vpc.vpc-id
+  any-ip           = ["${data.http.casa-public-ip.response_body}/32"]
+  tg-name          = var.tg-name
+  alb-name         = var.alb-name
+  public_subnet_id = module.vpc.public_subnet
 }
 
 module "codecommit" {
