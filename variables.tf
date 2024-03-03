@@ -97,3 +97,9 @@ variable "cw-scaling-down" {
   type        = string
   description = "Nome da metrica para scalling down"
 }
+
+variable "domain_name" {
+  type        = string
+  description = "Dominio principal"
+}
+

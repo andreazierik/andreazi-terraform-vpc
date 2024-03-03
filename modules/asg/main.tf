@@ -22,9 +22,9 @@ resource "aws_launch_template" "ami-base" {
 
 resource "aws_autoscaling_group" "asg-aplicacao" {
   name                      = var.asg-name
-  min_size                  = 1
-  max_size                  = 3
-  desired_capacity          = 2
+  min_size                  = 0
+  max_size                  = 0
+  desired_capacity          = 0
   health_check_grace_period = 300
   health_check_type         = "ELB"
   vpc_zone_identifier       = var.public-subnets
