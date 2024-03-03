@@ -4,3 +4,7 @@ output "repo-info" {
     ssh  = module.codecommit.ssh
   }
 }
+
+output "alb-endpoint" {
+  value = module.alb.alb-endpoint
+}
