@@ -34,6 +34,7 @@
 | Name | Description |
 |------|-------------|
 | <a name="output_alb-endpoint"></a> [alb-endpoint](#output\_alb-endpoint) | n/a |
+| <a name="output_alb-zone-id"></a> [alb-zone-id](#output\_alb-zone-id) | n/a |
 | <a name="output_sg-id"></a> [sg-id](#output\_sg-id) | n/a |
 | <a name="output_tg-arn"></a> [tg-arn](#output\_tg-arn) | n/a |
 <!-- END_TF_DOCS -->

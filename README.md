@@ -28,6 +28,7 @@ aws dynamodb create-table \
 | <a name="module_alb"></a> [alb](#module\_alb) | ./modules/alb | n/a |
 | <a name="module_asg"></a> [asg](#module\_asg) | ./modules/asg | n/a |
 | <a name="module_codecommit"></a> [codecommit](#module\_codecommit) | ./modules/codecommit | n/a |
+| <a name="module_route53"></a> [route53](#module\_route53) | ./modules/route53 | n/a |
 | <a name="module_vpc"></a> [vpc](#module\_vpc) | ./modules/vpc | n/a |
 
 ## Resources
@@ -50,6 +51,7 @@ aws dynamodb create-table \
 | <a name="input_azs"></a> [azs](#input\_azs) | Default AZs for this configuration | `list(string)` | n/a | yes |
 | <a name="input_cw-name"></a> [cw-name](#input\_cw-name) | Nome da metrica para scalling up | `string` | n/a | yes |
 | <a name="input_cw-scaling-down"></a> [cw-scaling-down](#input\_cw-scaling-down) | Nome da metrica para scalling down | `string` | n/a | yes |
+| <a name="input_domain_name"></a> [domain\_name](#input\_domain\_name) | Dominio principal | `string` | n/a | yes |
 | <a name="input_ec2-sg-name"></a> [ec2-sg-name](#input\_ec2-sg-name) | Nome do SG para as instancias | `string` | n/a | yes |
 | <a name="input_lt-name"></a> [lt-name](#input\_lt-name) | Nome do Launch Template | `string` | n/a | yes |
 | <a name="input_name"></a> [name](#input\_name) | VPC name | `string` | n/a | yes |
