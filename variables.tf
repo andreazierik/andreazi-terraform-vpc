@@ -52,3 +52,48 @@ variable "alb-name" {
   type        = string
   description = "Nome do ALB"
 }
+
+variable "ec2-sg-name" {
+  type        = string
+  description = "Nome do SG para as instancias"
+}
+
+variable "lt-name" {
+  type        = string
+  description = "Nome do Launch Template"
+}
+
+variable "ami-id" {
+  type        = string
+  description = "Default AMI com nginx e php 8.2"
+}
+
+variable "sshkey" {
+  type        = string
+  description = "Default ssh key"
+}
+
+variable "asg-name" {
+  type        = string
+  description = "Nome pro ASG"
+}
+
+variable "asg-policy" {
+  type        = string
+  description = "Nome da politica do ASG"
+}
+
+variable "cw-name" {
+  type        = string
+  description = "Nome da metrica para scalling up"
+}
+
+variable "asg-policy-down" {
+  type        = string
+  description = "Nome da policita para Scalling Down"
+}
+
+variable "cw-scaling-down" {
+  type        = string
+  description = "Nome da metrica para scalling down"
+}
