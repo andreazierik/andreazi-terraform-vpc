@@ -9,3 +9,7 @@ output "tg-arn" {
 output "alb-endpoint" {
   value = aws_lb.alb-asg-ec2.dns_name
 }
+
+output "alb-zone-id" {
+  value = aws_lb.alb-asg-ec2.zone_id
+}

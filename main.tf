@@ -38,6 +38,14 @@ module "codecommit" {
   repo-default-desc = var.repo-default-desc
 }
 
+module "route53" {
+  source = "./modules/route53"
+
+  domain_name  = var.domain_name
+  alb-endpoint = module.alb.alb-endpoint
+  alb-zone-id  = module.alb.alb-zone-id
+}
+
 module "vpc" {
   source = "./modules/vpc"
 
