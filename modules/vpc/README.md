@@ -19,7 +19,7 @@ https://spacelift.io/blog/terraform-aws-vpc
 | [aws_route_table_association.andreazi_public_subnet_asso](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table_association) | resource |
 | [aws_subnet.andreazi_private_subnet](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/subnet) | resource |
 | [aws_subnet.andreazi_public_subnet](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/subnet) | resource |
-| [aws_vpc.andreazi_vpc](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc) | resource |
+| [aws_vpc.andreazi_tf_vpc](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc) | resource |
 
 ## Inputs
 
@@ -27,8 +27,8 @@ https://spacelift.io/blog/terraform-aws-vpc
 |------|-------------|------|---------|:--------:|
 | <a name="input_any-ip"></a> [any-ip](#input\_any-ip) | n/a | `any` | n/a | yes |
 | <a name="input_azs"></a> [azs](#input\_azs) | n/a | `any` | n/a | yes |
-| <a name="input_name"></a> [name](#input\_name) | n/a | `any` | n/a | yes |
 | <a name="input_private_subnet_cidr_blocks"></a> [private\_subnet\_cidr\_blocks](#input\_private\_subnet\_cidr\_blocks) | n/a | `any` | n/a | yes |
+| <a name="input_projeto"></a> [projeto](#input\_projeto) | n/a | `any` | n/a | yes |
 | <a name="input_public_subnet_cidr_blocks"></a> [public\_subnet\_cidr\_blocks](#input\_public\_subnet\_cidr\_blocks) | n/a | `any` | n/a | yes |
 | <a name="input_vpc_cidr_block"></a> [vpc\_cidr\_block](#input\_vpc\_cidr\_block) | n/a | `any` | n/a | yes |
 
