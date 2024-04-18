@@ -1,10 +1,10 @@
 # cria a vpc para substituir a padrao
-resource "aws_vpc" "andreazi_vpc" {
+resource "aws_vpc" "andreazi_tf_vpc" {
   cidr_block           = var.vpc_cidr_block
   enable_dns_hostnames = true
 
   tags = {
-    Name = "vpc-${var.name}"
+    Name = "vpc-${var.projeto}"
   }
 }
 
@@ -38,7 +38,7 @@ resource "aws_internet_gateway" "andreazi_igw" {
   vpc_id = aws_vpc.andreazi_vpc.id
 
   tags = {
-    Name = "igw-${var.name}"
+    Name = "igw-${var.projeto}"
   }
 }
 
